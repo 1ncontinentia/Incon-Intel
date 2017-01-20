@@ -1,73 +1,42 @@
-# INC_Scripts_A3
-Incontinentia's Mission Scripts for Arma 3
-
-INC_Scripts_A3 is a collection of scripts for Arma 3 mission makers. They are primarily designed to be used with ALiVE and ACE in SP / Coop scenarios but some can be used standalone.
-
-These are currently available as a (very) early Alpha. More scripts will be released in the upcoming weeks as and when I get the time to test them.
-
-Requires CBA.
-
-## Instructions
-
-Place all files in your mission root folder. If you already have a description.ext or init.sqf, add the lines from these files into your pre-existing ones.
-
-Inside the INCON\INC_undercover and INCON\INC_intel folders, you will find the XXX_setup.sqf files. Edit these to your preference. Also read the readme in the respective folders to find out how to set up the scripts fully for your mission.
-
-## Overview
-
-(Check individual readme files in the respective addon folders for more information).
-
-#### INC_Undercover
-Go undercover as a civilian, become a local hero, recruit other civilians, cause mayhem. Features an optimised detection system that allows you to maintain cover as long as you are careful and choose your targets well.
-
-Requires: CBA, ALiVE Civ Placement Modules (for civilian recruitment)
-
-Status: Experimental release. Feature complete, untested in Coop but works well in dedicated server / SP environments.
-
-#### INC_Intel
-Enemy units drop intel when they are killed. Allows units to hack into enemy radio networks and see nearby groups on the map, as well as track cellphone contacts. Also reveals enemy installations.
+INCONTINENTIA'S INTEL (alpha)
 
 Requires: CBA
 
-Status: Initial (early Alpha) release.
 
-#### INC_groupPersist
+|||*********************> Features <*********************|||
 
-Provides persistence for non-playable AI teammates (in player group) between play sessions when ALiVE data is present using iniDBI2. Saves full unit information for up to 11 AI teammates and loads it when there is corresponding ALiVE persistent player information.
+INTEL
 
-To have full persistent AI teammates you need to:
+* Made for ALiVE
+* Units drop intel when they are killed
 
-(a) have mission time persistence to be set to on (so iniDBI2 can tally it's information with ALiVE's persistent data),
-
-(b) save and exit the server at the end of each session,  
-
-(c) when loading the mission again, make sure the mission time is the same as it was when you last saved and exited (if not, your persistent group won't load),
-
-(d)  don't play the same mission in multiplayer in the meantime if persistent data hasn't loaded (this will also overwrite your saved group data).
-
-No further configuration required, just load the iniDBI2 mod on server and client and it will save your group state periodically (including health, loadout, skill etc.) until you save and exit the server.
-
-Requires: CBA, ALiVE, iniDBI2, (works best with TADST in SP / Coop locally hosted dedicated server sessions)
-
-Status: Experimental release.
-
-#### INC_Surrender
-Adds a new element to the battlefield: fear.
-
-Get close enough to an enemy unit and order them to surrender; whether they do surrender depends on a number of factors, including their morale, whether you have taken them by surprise, their weapon, your weapon, its health, and how close you are when you tell them to surrender.
-
-Ambush a patrol and if they are outnumbered, surprised or unskilled, they might make a tactical withdrawal, give up and run or even drop their weapons and put their hands up.
-
-Keep an eye on surrendered units, you never know what they might try.
-
-Requires: CBA, ACE.
-
-Status: Unreleased.
+Dropped intel will: 
+* Find ALiVE asym opcom installations
+* Track phone contacts on map (requires UAV terminal)
+* Track radio contacts on map (requires UAV terminal)
+* Tracking accuracy depends on the weather, overhead cover, range etc.
 
 
+|||*********************> USAGE <*********************|||
 
-### Credits
+Place the INCON folder, initUnits.sqf, description.ext and init.sqf all in your mission root folder. 
 
-Spyderblack723 - contributed several useful functions and a massive amount of help over the past year
-Dixon13 - wrote the original intel spawning script
-ARJay - wrote the original unit tracking script
+If you already have a description.ext or init.sqf, add the lines from these files into your pre-existing ones.
+
+Change your settings in the INT_setup.sqf file.
+
+
+|||*********************> Future Plans <*********************|||
+
+Options to turn on tracking and turn it off
+
+Better tracking markers
+
+Greater configurability of settings
+
+
+|||*********************> Thanks <*********************|||
+
+Massive thanks to Spyderblack723 for all the help over this past year or so and whose awesome Spyder Addons mod inspired me to make stuff.
+Also, thank you to davidoss, Grumpy Old Man, Tajin and sarogahtyp for coming up with the basis for the detection functions, as well as the guys on Arma 3 discord.
+Lots of other people deserve thanks too I'm sure!
