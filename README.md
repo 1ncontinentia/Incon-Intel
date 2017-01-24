@@ -1,9 +1,9 @@
-INCONTINENTIA'S INTEL (alpha)
+## INCONTINENTIA'S INTEL (alpha)
 
 Requires: CBA
 
 
-|||*********************> Features <*********************|||
+#### Features
 
 INTEL
 
@@ -17,7 +17,7 @@ Dropped intel will:
 * Tracking accuracy depends on the weather, overhead cover, range etc.
 
 
-|||*********************> USAGE <*********************|||
+#### Usage
 
 Place the INCON folder, initUnits.sqf, description.ext and init.sqf all in your mission root folder. 
 
@@ -26,7 +26,7 @@ If you already have a description.ext or init.sqf, add the lines from these file
 Change your settings in the INT_setup.sqf file.
 
 
-|||*********************> Future Plans <*********************|||
+#### Future Plans
 
 Options to turn on tracking and turn it off
 
@@ -35,7 +35,7 @@ Better tracking markers
 Greater configurability of settings
 
 
-|||*********************> Thanks <*********************|||
+#### Credits
 
 Massive thanks to Spyderblack723 for all the help over this past year or so and whose awesome Spyder Addons mod inspired me to make stuff.
 Also, thank you to davidoss, Grumpy Old Man, Tajin and sarogahtyp for coming up with the basis for the detection functions, as well as the guys on Arma 3 discord.
