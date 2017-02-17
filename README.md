@@ -21,7 +21,7 @@ Dropped intel will:
 
 Place the INCON folder, initUnits.sqf, description.ext and init.sqf all in your mission root folder. 
 
-If you already have a description.ext or init.sqf, add the lines from these files into your pre-existing ones.
+If you already have a description.ext or init.sqf, add the lines from these files into your pre-existing ones. In description.ext, if the class is already defined (for instance, cfgFunctions), just add the #include line to the given class. 
 
 Change your settings in the INT_setup.sqf file.
 
