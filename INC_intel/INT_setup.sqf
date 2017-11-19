@@ -25,5 +25,5 @@ _pcHVTintelReg = 3; //Percentage chance of object with HVT intel spawning (not i
 _pcRadioReg = 80; //Percentage chance of group radio spawning (group leaders only)
 _pcPhoneReg = 12; //Percentage chance of mobile phone (non-group leaders only)
 
-_asymSide = independent; //Which side is asymmetric (1 side only, can be east, west, independent or sideEmpty)
-_asymFaction = IND_C_F;  //Which factions is asymmetric (1 faction only for now)
+_asymSide = independent;  //Which side is asymmetric (1 side only, can be east, west, independent or sideEmpty)
+_asymFaction = "IND_C_F"; //Which factions is asymmetric (1 faction only for now, must have quotation marks around it as in "OPF_F")
