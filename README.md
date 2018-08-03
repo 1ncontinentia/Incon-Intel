@@ -10,7 +10,7 @@ INTEL
 * Made for ALiVE
 * Units drop intel when they are killed
 
-Dropped intel will: 
+Dropped intel will:
 * Find ALiVE asym opcom installations
 * Track phone contacts on map (requires UAV terminal)
 * Track radio contacts on map (requires UAV terminal)
@@ -19,20 +19,11 @@ Dropped intel will:
 
 #### Usage
 
-Place the INCON folder, initUnits.sqf, description.ext and init.sqf all in your mission root folder. 
+Place the INCON folder, initUnits.sqf, description.ext and init.sqf all in your mission root folder.
 
-If you already have a description.ext or init.sqf, add the lines from these files into your pre-existing ones. In description.ext, if the class is already defined (for instance, cfgFunctions), just add the #include line to the given class. 
+If you already have a description.ext or init.sqf, add the lines from these files into your pre-existing ones. In description.ext, if the class is already defined (for instance, cfgFunctions), just add the #include line to the given class.
 
 Change your settings in the INT_setup.sqf file.
-
-
-#### Future Plans
-
-Options to turn on tracking and turn it off
-
-Better tracking markers
-
-Greater configurability of settings
 
 
 #### Credits

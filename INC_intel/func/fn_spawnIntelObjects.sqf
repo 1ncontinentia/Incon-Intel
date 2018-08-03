@@ -35,7 +35,7 @@ params [["_unit",objNull]];
 
 
 //Exit if the code is already running on the unit
-if (_unit getVariable ["INC_intelKillEh",false]) exitWith {};
+if (_unit getVariable ["INC_intelKillEh",false] || {(side _unit == CIVILIAN)}) exitWith {};
 
 //Set variable on the unit so we can detect if the code is trying to run on same unit more than once and prevent that
 _unit setVariable ["INC_intelKillEh", true, true];
@@ -73,7 +73,7 @@ if (side _unit == _asymSide) exitWith {
 
 	_unit setVariable ["asymIntel", true, false];
 
-	if ((_pcHVTintelAsym > (random 100)) && !(isNil "INCON_fnc_markHVTIntel")) exitWith {
+	if ((_pcHVTintelAsym > (random 100)) && !(isNil "INCON_fnc_markHVTIntel")) then {
 
 		//Eventhandler HVT intel
 		_unit addEventHandler["Killed", {
@@ -107,7 +107,7 @@ if (side _unit == _asymSide) exitWith {
 		}];
 	};
 
-	if (_pcInstallationMark > (random 100)) exitWith {
+	if (_pcInstallationMark > (random 100)) then {
 
 		//Mark nearest installations
 		_unit addEventHandler["Killed", {
@@ -201,7 +201,7 @@ if (side _unit == _asymSide) exitWith {
 convIntelSide = side _unit;
 _unit setVariable ["convIntel", true, false];
 
-if ((_pcHVTintelReg > (random 100)) && !(isNil "INCON_fnc_markHVTIntel")) exitWith {
+if ((_pcHVTintelReg > (random 100)) && !(isNil "INCON_fnc_markHVTIntel")) then {
 
 	//HVTs
 	_unit addEventHandler ["Killed", {
@@ -293,7 +293,6 @@ if (_unit getVariable ["INC_isGroupLead",false]) then {
 
 				},[],1,false,true,"","",3];
 			}, _intelObject] call CBA_fnc_globalExecute;
-
 		}];
 	};
 };

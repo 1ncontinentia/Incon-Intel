@@ -1,6 +1,6 @@
 class INC_intel
 {
-	tag = "Incon Intel";
+	tag = "INCON";
 	class Intel
 	{
 
