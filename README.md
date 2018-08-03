@@ -1,4 +1,4 @@
-## INCONTINENTIA'S INTEL (alpha)
+## INCONTINENTIA'S INTEL
 
 Requires: CBA
 
